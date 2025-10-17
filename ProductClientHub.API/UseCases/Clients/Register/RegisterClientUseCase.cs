@@ -12,6 +12,11 @@ namespace ProductClientHub.API.UseCases.Clients.Register
 
             var result = validator.Validate(request);
 
+            if (!result.IsValid == false)
+            {
+                throw new ArgumentException("Dados do cliente inválidos.");
+            }
+
             return new ResponseClientJson();
         }
     }
