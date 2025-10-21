@@ -17,7 +17,7 @@ namespace ProductClientHub.API.UseCases.Products.Register
             {
                 Name = request.Name,
                 Price = request.Price,
-                Id = Guid.NewGuid(),
+                Brand = request.Brand,
                 ClientId = clientId,
             };
 
