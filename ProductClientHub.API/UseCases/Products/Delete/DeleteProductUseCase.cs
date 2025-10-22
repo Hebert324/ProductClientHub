@@ -10,7 +10,7 @@ namespace ProductClientHub.API.UseCases.Products.Delete
             var dbContext = new ProductClientHubDbContext();
 
             var entity = dbContext.Products.FirstOrDefault(product => product.Id == id);
-            if (entity == null)
+            if (entity is null)
             {
                 throw new NotFoundException("Produto não encontrado.");
             }
